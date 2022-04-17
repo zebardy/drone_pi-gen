@@ -1,0 +1,25 @@
+---
+kind: pipeline
+type: kubernetes
+name: drone_pi-gen
+
+platform:
+  os: linux
+  arch: aarch64
+
+trigger:
+  branches:
+    - master
+  event:
+    - push
+
+steps:
+  - name: docker
+    image: plugins/docker
+    settings:
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+      repo: zebardy/drone_pi-gen
+      dockerfile: Dockerfile
