@@ -3,6 +3,7 @@
 WORKSPACE=$(pwd)
 pwd
 ls -lrt
+docker ps
 
 echo "IMG_NAME='Raspbian'" > config
 echo "FIRST_USER_PASS='${PLUGIN_FIRST_USER_PASS}'" >> config
