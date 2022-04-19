@@ -3,6 +3,10 @@
 WORKSPACE=$(pwd)
 pwd
 ls -lrt
+ls -lrt /var/run
+ls -lrt /proc
+sestatus
+setenforce 0
 docker ps
 
 echo "IMG_NAME='Raspbian'" > config
