@@ -4,7 +4,8 @@ WORKSPACE=$(pwd)
 pwd
 ls -lrt
 
-/usr/local/bin/dockerd --host=unix:///var/run/docker.sock --data-root /var/lib/docker
+nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock --data-root /var/lib/docker &
+sleep 15
 ls -lrt /var/run
 #ls -lrt /proc
 #sestatus
