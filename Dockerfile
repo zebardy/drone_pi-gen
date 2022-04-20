@@ -1,5 +1,5 @@
 FROM arm64v8/docker:20.10.9-dind
-RUN apk add git
+RUN apk add git bash
 ENV DOCKER_HOST=unix:///var/run/docker.sock
 RUN git clone --depth 1 https://github.com/RPI-Distro/pi-gen.git
 RUN pwd
