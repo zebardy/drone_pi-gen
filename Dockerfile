@@ -6,4 +6,4 @@ RUN pwd
 RUN ls -lrt /pi-gen
 ADD script.sh /bin/
 RUN chmod +x /bin/script.sh
-ENTRYPOINT /bin/script.sh
+ENTRYPOINT ["/usr/local/bin/dockerd-entrypoint.sh", "/bin/script.sh"]
