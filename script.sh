@@ -25,6 +25,9 @@ cat ./build-docker.sh
 exec ./build-docker.sh
 cat ./work/Raspbian/stage0/rootfs/debootstrap/debootstrap.log
 
+ls -lrt
+ls -lrt ./deploy
+
 cd $WORKSPACE
 
 ls -lrt 
