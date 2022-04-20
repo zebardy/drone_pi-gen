@@ -12,16 +12,19 @@ ls -lrt /var/run
 #setenforce 0
 docker ps
 
+cd /pi-gen
 echo "IMG_NAME='Raspbian'" > config
 echo "FIRST_USER_PASS='${PLUGIN_FIRST_USER_PASS}'" >> config
 echo "ENABLE_SSH='${PLUGIN_ENABLE_SSH}'" >> config
 
-touch /pi-gen/stage3/SKIP /pi-gen/stage4/SKIP /pi-gen/stage5/SKIP
-touch /pi-gen/stage4/SKIP_IMAGES /pi-gen/stage5/SKIP_IMAGES
-ls -lrt /pi-gen/build-docker.sh
+touch ./stage3/SKIP ./stage4/SKIP ./stage5/SKIP
+touch ./stage4/SKIP_IMAGES ./stage5/SKIP_IMAGES
+ls -lrt ./build-docker.sh
 echo "This is a test"
-cat /pi-gen/build-docker.sh
-exec /pi-gen/build-docker.sh
-cat /pi-gen/work/Raspbian/stage0/rootfs/debootstrap/debootstrap.log
+cat ./build-docker.sh
+exec ./build-docker.sh
+cat ./work/Raspbian/stage0/rootfs/debootstrap/debootstrap.log
+
+cd $WORKSPACE
 
 ls -lrt 
