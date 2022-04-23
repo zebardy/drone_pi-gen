@@ -24,7 +24,10 @@ exec ./build-docker.sh
 
 ls -lrt
 ls -lrt ./deploy
-cp -R ./deploy $WORKSPACE
+mkdir $WORKSPACE/deploy
+cp -R ./deploy/* $WORKSPACE/deploy
 
 cd $WORKSPACE
+pwd
 ls -lrt
+ls -lrt ./deploy
