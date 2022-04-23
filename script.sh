@@ -19,8 +19,9 @@ touch ./stage3/SKIP ./stage4/SKIP ./stage5/SKIP
 touch ./stage4/SKIP_IMAGES ./stage5/SKIP_IMAGES
 rm stage4/EXPORT*
 
-exec ./build-docker.sh
+./build-docker.sh
 #cat ./work/Raspbian/stage0/rootfs/debootstrap/debootstrap.log
+echo "Docker build done!!!"
 
 ls -lrt
 ls -lrt ./deploy
@@ -29,5 +30,7 @@ cp -R ./deploy/* $WORKSPACE/deploy
 
 cd $WORKSPACE
 pwd
+echo "Workspace"
 ls -lrt
+echo "Deploy"
 ls -lrt ./deploy
