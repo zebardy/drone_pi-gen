@@ -21,12 +21,13 @@ rm stage4/EXPORT*
 
 ./build-docker.sh
 #cat ./work/Raspbian/stage0/rootfs/debootstrap/debootstrap.log
-echo "Docker build done!!!"
+# echo "Docker build done!!!"
 
-ls -lrt
+#ls -lrt
 ls -lrt ./deploy
-mkdir $WORKSPACE/deploy
-cp -R ./deploy/* $WORKSPACE/deploy
+#mkdir $WORKSPACE/deploy
+#cp -R ./deploy/* $WORKSPACE/deploy
+cp -R ./deploy $WORKSPACE
 
 cd $WORKSPACE
 pwd
