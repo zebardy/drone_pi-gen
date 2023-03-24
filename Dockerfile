@@ -1,4 +1,4 @@
-FROM arm64v8/docker:20.10.23-dind
+FROM arm64v8/docker:23.0.1-dind
 RUN apk add git bash rsync
 ENV DOCKER_HOST=unix:///var/run/docker.sock
 RUN git clone --depth 1 https://github.com/zebardy/pi-gen.git
