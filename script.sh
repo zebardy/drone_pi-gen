@@ -21,7 +21,8 @@ if [ -n "$PLUGIN_PUBKEY_ONLY_SSH" ]; then echo "PUBKEY_ONLY_SSH='${PLUGIN_PUBKEY
 if [ -n "$PLUGIN_ENABLE_SSH" ]; then echo "ENABLE_SSH='${PLUGIN_ENABLE_SSH}'" >> config; fi
 if [ -n "$PLUGIN_TARGET_HOSTNAME" ]; then echo "TARGET_HOSTNAME='${PLUGIN_TARGET_HOSTNAME}'" >> config; fi
 
-if [ -n $PLUGIN_DEBUG ]; then
+echo "PLUGIN_DEBUG = $PLUGIN_DEBUG"
+if [ -n "$PLUGIN_DEBUG" ]; then
   echo "===CONFIG==="
   cat config
   echo "===CONFIG END==="
