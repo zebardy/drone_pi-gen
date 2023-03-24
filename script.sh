@@ -13,13 +13,13 @@ rsync -a "$SOURCE_DIR/" "$PIGEN_DIR"
 
 cd $PIGEN_DIR
 echo "IMG_NAME='Raspbian'" >> config
-if [ -n "$PLUGIN_FIRST_USER_PASS" ]; then echo "FIRST_USER_PASS='${PLUGIN_FIRST_USER_PASS}'" >> config fi
-if [ -n "$PLUGIN_DISABLE_FIRST_BOOT_USER_RENAME" ]; then echo "DISABLE_FIRST_BOOT_USER_RENAME='${PLUGIN_DISABLE_FIRST_BOOT_USER_RENAME}'" >> config fi
-if [ -n "$PLUGIN_FIRST_USER_NAME" ]; then echo "FIRST_USER_NAME='${PLUGIN_FIRST_USER_NAME}'" >> config fi
-if [ -n "$PLUGIN_PUBKEY_SSH_FIRST_USER" ]; then echo "PUBKEY_SSH_FIRST_USER='${PLUGIN_PUBKEY_SSH_FIRST_USER}'" >> config fi
-if [ -n "$PLUGIN_PUBKEY_ONLY_SSH" ]; then echo "PUBKEY_ONLY_SSH='${PLUGIN_PUBKEY_ONLY_SSH}'" >> config fi
-if [ -n "$PLUGIN_ENABLE_SSH" ]; then echo "ENABLE_SSH='${PLUGIN_ENABLE_SSH}'" >> config fi
-if [ -n "$PLUGIN_TARGET_HOSTNAME" ]; then echo "TARGET_HOSTNAME='${PLUGIN_TARGET_HOSTNAME}'" >> config fi
+if [ -n "$PLUGIN_FIRST_USER_PASS" ]; then echo "FIRST_USER_PASS='${PLUGIN_FIRST_USER_PASS}'" >> config; fi
+if [ -n "$PLUGIN_DISABLE_FIRST_BOOT_USER_RENAME" ]; then echo "DISABLE_FIRST_BOOT_USER_RENAME='${PLUGIN_DISABLE_FIRST_BOOT_USER_RENAME}'" >> config; fi
+if [ -n "$PLUGIN_FIRST_USER_NAME" ]; then echo "FIRST_USER_NAME='${PLUGIN_FIRST_USER_NAME}'" >> config; fi
+if [ -n "$PLUGIN_PUBKEY_SSH_FIRST_USER" ]; then echo "PUBKEY_SSH_FIRST_USER='${PLUGIN_PUBKEY_SSH_FIRST_USER}'" >> config; fi
+if [ -n "$PLUGIN_PUBKEY_ONLY_SSH" ]; then echo "PUBKEY_ONLY_SSH='${PLUGIN_PUBKEY_ONLY_SSH}'" >> config; fi
+if [ -n "$PLUGIN_ENABLE_SSH" ]; then echo "ENABLE_SSH='${PLUGIN_ENABLE_SSH}'" >> config; fi
+if [ -n "$PLUGIN_TARGET_HOSTNAME" ]; then echo "TARGET_HOSTNAME='${PLUGIN_TARGET_HOSTNAME}'" >> config; fi
 
 if [ -n $PLUGIN_DEBUG ]; then
   echo "===CONFIG==="
