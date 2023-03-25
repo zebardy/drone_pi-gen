@@ -20,6 +20,8 @@ if [ -n "$PLUGIN_PUBKEY_SSH_FIRST_USER" ]; then echo "PUBKEY_SSH_FIRST_USER='${P
 if [ -n "$PLUGIN_PUBKEY_ONLY_SSH" ]; then echo "PUBKEY_ONLY_SSH='${PLUGIN_PUBKEY_ONLY_SSH}'" >> config; fi
 if [ -n "$PLUGIN_ENABLE_SSH" ]; then echo "ENABLE_SSH='${PLUGIN_ENABLE_SSH}'" >> config; fi
 if [ -n "$PLUGIN_TARGET_HOSTNAME" ]; then echo "TARGET_HOSTNAME='${PLUGIN_TARGET_HOSTNAME}'" >> config; fi
+if [ -n "$PLUGIN_USE_QCOW2" ]; then echo "USE_QCOW2='${PLUGIN_USE_QCOW2}'" >> config; fi
+if [ -n "$PLUGIN_APT_PROXY" ]; then echo "APT_PROXY='${PLUGIN_APT_PROXY}'" >> config; fi
 
 echo "PLUGIN_DEBUG = $PLUGIN_DEBUG"
 if [ -n "$PLUGIN_DEBUG" ]; then
