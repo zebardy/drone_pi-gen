@@ -44,7 +44,8 @@ echo "Docker based build start!!!"
 #cat ./work/Raspbian/stage0/rootfs/debootstrap/debootstrap.log
 echo "Docker build done!!!"
 
-mkdir $WORKSPACE/deploy
-cp -R ./deploy/* $WORKSPACE/deploy
-
+date=$(date -u +%Y%m%d-%H%M%S)
+mkdir -p $WORKSPACE/output/$date/deploy
+cp -R ./deploy/* $WORKSPACE/output/$DRONE_REPO_NAME/${date}-$DRONE_BUILD_NUMBER/deploy
 cd $WORKSPACE
+ln -s ./output/$DRONE_REPO_NAME/${date}-$DRONE_BUILD_NUMBER/deploy ./deploy
