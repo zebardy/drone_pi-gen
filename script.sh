@@ -45,7 +45,7 @@ echo "Docker based build start!!!"
 echo "Docker build done!!!"
 
 date=$(date -u +%Y%m%d-%H%M%S)
-mkdir -p $WORKSPACE/output/$date/deploy
+mkdir -p $WORKSPACE/output/$DRONE_REPO_NAME/${date}-$DRONE_BUILD_NUMBER/deploy
 cp -R ./deploy/* $WORKSPACE/output/$DRONE_REPO_NAME/${date}-$DRONE_BUILD_NUMBER/deploy
 cd $WORKSPACE
 ln -s ./output/$DRONE_REPO_NAME/${date}-$DRONE_BUILD_NUMBER/deploy ./deploy
